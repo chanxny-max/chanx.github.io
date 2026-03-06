@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Study resources">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            corePlugins: {
+                preflight: false,
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../css/main.css">
+    
+    <title>Study Resources</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+
+<body>
+    <script src="../js/home.js" defer></script>
+    <script src="../js/userstate.js" defer></script>
+    <script src="../js/logout.js" defer></script>
+
+    <!-- Navigation bar -->
+    <nav class="topnavbar">
+
+        <!-- Home (Left aligned) -->
+        <div class="nav-group nav-left">
+            <div class="dropdown">
+                <a href="../html/home.html">Home <span class="dropdown-arrow">▼</span></a>
+                <div class="dropdown-content">
+                    <a href="../html/home.html#about">About Us</a>
+                    <a href="../html/home.html#features">Features</a>
+                    <a href="../html/home.html#contact">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Study resources, groups and tips (Center aligned) -->
+        <div class="nav-group nav-center">
+            <div class="dropdown">
+                <a class="protected-link" data-href="../html/studyresources.html" href="#">Study Resources <span class="dropdown-arrow">▼</span></a>
+                <div class="dropdown-content">
+                    <a class="protected-link" data-href="../html/notes.html" href="#">Notes</a>
+                    <a class="protected-link" data-href="../html/flashcards.html" href="#">Flashcards</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a class="protected-link" data-href="../html/studygroups.html" href="#">Study Groups <span class="dropdown-arrow">▼</span></a>
+                <div class="dropdown-content">
+                    <a class="protected-link" data-href="../html/browsegroups.html" href="#">View Groups</a>
+                </div>
+            </div>
+
+            <a class="protected-link" data-href="../html/studytips.html" href="#">Study Tips</a>
+        </div>
+
+        <!-- My Profile / Account (Right aligned) -->
+        <div class="nav-group nav-right">
+            
+            <!-- Logged in state -->
+            <div class="dropdown" id="loggedInMenu" style="display: none;">
+                <a href="../html/userprofile.html">My Profile <span class="dropdown-arrow">▼</span></a>
+                <div class="dropdown-content">
+                    <a href="../html/accountsettings.html">Account Settings</a>
+                    <button class="logout-button" onclick="openModal()">Logout</button>
+                </div>
+            </div>
+
+            <!-- Logged out state -->
+            <div class="dropdown" id="loggedOutMenu">
+                <a class="protected-link" data-href="#" href="#">Account <span class="dropdown-arrow">▼</span></a>
+                <div class="dropdown-content">
+                    <a href="../html/login.html">Log In</a>
+                    <a href="../html/signup.html">Create Account</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Logout modal -->
+    <div class="modal-logout" id="logoutModal">
+        <div class="modal-content-logout">
+            <p class="p-logout">Are you sure you want to log out?</p>
+            <div class="modal-buttons-logout">
+                <button class="confirm-button-logout" onclick="logout()">Confirm</button>
+                <button class="cancel-button-logout" onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tailwind Study Resources Grid -->
+    <main class="max-w-5xl mx-auto px-5 py-10 text-center">
+        <h1 class="text-4xl text-gray-900 mb-2.5">Study Resources</h1>
+        <p class="text-lg text-gray-600 mb-10">Explore our collection of study materials to help you with your learning.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+
+            <!-- Notes box -->
+            <div class="bg-white rounded-xl shadow-lg p-7 max-w-xs flex flex-col items-center text-center transition-all duration-200 ease-in-out hover:-translate-y-1 hover:shadow-xl">
+                <h2 class="text-xl text-gray-900 mb-3">Notes</h2>
+                <p class="text-sm text-gray-600 leading-relaxed mb-5 flex-grow">Access and organize your study notes in one place.</p>
+                <a href="../html/notes.html" class="inline-block bg-gradient-to-r from-gray-300 to-gray-500 text-gray-900 no-underline px-7 py-2.5 rounded-md text-base font-bold transition-opacity duration-200 ease-in-out hover:opacity-85">View More</a>
+            </div>
+
+            <!-- Flashcards box -->
+            <div class="bg-white rounded-xl shadow-lg p-7 max-w-xs flex flex-col items-center text-center transition-all duration-200 ease-in-out hover:-translate-y-1 hover:shadow-xl">
+                <h2 class="text-xl text-gray-900 mb-3">Flashcards</h2>
+                <p class="text-sm text-gray-600 leading-relaxed mb-5 flex-grow">Study with interactive flashcards to test your knowledge. This is a great place for you to learn and apply your knowledge.</p>
+                <a href="../html/flashcards.html" class="inline-block bg-gradient-to-r from-gray-300 to-gray-500 text-gray-900 no-underline px-7 py-2.5 rounded-md text-base font-bold transition-opacity duration-200 ease-in-out hover:opacity-85">View More</a>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+.terms {
+    cursor: pointer;
+}
+
+.terms-text {
+    max-height: 250px;
+    overflow-y: auto;
+    text-align: justify;
+    margin-top: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 25px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}

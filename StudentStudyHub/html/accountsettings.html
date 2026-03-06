@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Account Settings">
+    
+    <link rel="stylesheet" href="../css/main.css">
+    
+    <title>Your User Profile Settings</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+
+<body>
+    <script src="../js/home.js" defer></script>
+    <script src="../js/userstate.js" defer></script>
+    <script src="../js/logout.js" defer></script>
+    <script src="../js/accountsettings.js" defer></script>
+
+    <!-- Navigation bar -->
+    <nav class="topnavbar">
+
+        <!-- Home (Left aligned) -->
+        <div class="nav-group nav-left">
+            <div class="dropdown">
+                <a href="../html/home.html">Home <span class="dropdown-arrow">▼</span></a>
+                <div class="dropdown-content">
+                    <a href="../html/home.html#about">About Us</a>
+                    <a href="../html/home.html#features">Features</a>
+                    <a href="../html/home.html#contact">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Study resources, groups and tips (Center aligned) -->
+        <div class="nav-group nav-center">
+            <div class="dropdown">
+                <a class="protected-link" data-href="../html/studyresources.html" href="#">Study Resources <span class="dropdown-arrow">▼</span></a>
+                <div class="dropdown-content">
+                    <a class="protected-link" data-href="../html/notes.html" href="#">Notes</a>
+                    <a class="protected-link" data-href="../html/flashcards.html" href="#">Flashcards</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a class="protected-link" data-href="../html/studygroups.html" href="#">Study Groups <span class="dropdown-arrow">▼</span></a>
+                <div class="dropdown-content">
+                    <a class="protected-link" data-href="../html/browsegroups.html" href="#">View Groups</a>
+                </div>
+            </div>
+
+            <a class="protected-link" data-href="../html/studytips.html" href="#">Study Tips</a>
+        </div>
+
+        <!-- My Profile / Account (Right aligned) -->
+        <div class="nav-group nav-right">
+            
+            <!-- Logged in state -->
+            <div class="dropdown" id="loggedInMenu" style="display: none;">
+                <a href="../html/userprofile.html">My Profile <span class="dropdown-arrow">▼</span></a>
+                <div class="dropdown-content">
+                    <a href="../html/accountsettings.html">Account Settings</a>
+                    <button class="logout-button" onclick="openModal()">Logout</button>
+                </div>
+            </div>
+
+            <!-- Logged out state -->
+            <div class="dropdown" id="loggedOutMenu">
+                <a class="protected-link" data-href="#" href="#">Account <span class="dropdown-arrow">▼</span></a>
+                <div class="dropdown-content">
+                    <a href="../html/login.html">Log In</a>
+                    <a href="../html/signup.html">Create Account</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Logout modal -->
+    <div class="modal-logout" id="logoutModal">
+        <div class="modal-content-logout">
+            <p class="p-logout">Are you sure you want to log out?</p>
+            <div class="modal-buttons-logout">
+                <button class="confirm-button-logout" onclick="logout()">Confirm</button>
+                <button class="cancel-button-logout" onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Profile -->
+    <div class="profile-wrapper">
+        <div class="profile-container">
+            <img id="profileImage" class="profile-pic" src="../images/pfp.png" alt="Profile picture">
+
+            <div class="button-container">
+                <div class="change-pfp-button">
+                    <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+                    <label for="imageUpload" class="upload-button">Change Profile Picture</label>
+                </div>
+            </div>
+
+            <div class="section-profile">
+                <h3>Bio</h3>
+                <textarea id="bioInput" class="textarea-profile" rows="4" placeholder="Tell us more about yourself"></textarea>
+            </div>
+
+            <div class="section-profile">
+                <h3>About me</h3>
+                <textarea id="aboutInput" class="textarea-profile" rows="2" placeholder="Maybe tell us about your favourite hobby?"></textarea>
+            </div>
+
+            <div class="button-container">
+                <button class="save-profile-button" onclick="saveProfile()">Save Profile</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

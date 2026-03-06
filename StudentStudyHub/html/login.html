@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login">
+
+    <link rel="stylesheet" href="../css/login.css">
+
+    <title>Login Page</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+
+<body>
+    <script src="../js/inputvalidation.js" defer></script>
+    <script src="../js/userstate.js" defer></script>
+    
+    <div class="login-container">
+        <h2>Student Login</h2>
+
+        <form id="lsForm">
+
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required minlength="8">
+
+            <button type="submit">Login</button>
+            
+            <h6>
+                <p>Forgot password? Click <a href="passwordreset.html">here</a> to reset password.</p>
+                <p>Don't have an account? Click <a href="signup.html">here</a> to sign up!</p>
+            </h6>
+
+        </form>
+    </div>
+
+</body>
+</html>

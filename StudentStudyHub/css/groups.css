@@ -1,0 +1,105 @@
+/* Scroll ignore navbar */
+#find {
+    scroll-margin-top: 120px;
+}
+
+/* Main */
+.main-groups {
+    text-align: center;
+    padding: 20px 16px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Table */
+.table-container {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    margin: 0 auto;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+
+.table-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+table {
+    width: 100%;
+    min-width: 400px;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: black;
+}
+
+thead th {
+    color: white;
+    padding: 16px;
+    text-align: center;
+    font-weight: 600;
+}
+
+thead th:first-child {
+    border-radius: 8px 0 0 0;
+}
+
+thead th:last-child {
+    border-radius: 0 8px 0 0;
+}
+
+tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.2s;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+tbody td {
+    padding: 16px;
+    color: #333;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #888;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .table-container {
+        padding: 20px;
+        width: 95%;
+    }
+
+    thead th,
+    tbody td {
+        padding: 12px 8px;
+        font-size: 0.875rem;
+    }
+}

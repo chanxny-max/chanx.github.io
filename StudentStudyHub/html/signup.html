@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign up an account">
+
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/signup.css">
+    <title>Sign Up</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+    <script src="../js/signup.js" defer></script>
+    <script src="../js/userstate.js" defer></script>
+
+    <div class="login-container">
+        <h2>Create a Student Account</h2>
+
+        <form id="lsForm">
+
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Username" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required minlength="8">
+
+            <label>
+                <input type="radio" id="tos" disabled required>
+                &nbsp; I agree to the 
+                <a href="#" id="tosLink">Terms of Service</a>
+            </label>
+
+            <button type="submit" id="signupButton">Sign up</button>
+
+            <h6>
+                <p>Already have an account? Click <a href="../html/login.html"> here </a>to log in!</p>
+                <p>You must read and agree to the Terms of Service before you can sign up.</p>
+            </h6>
+        </form>
+
+        <div id="termsModal" class="modal">
+            <div class="modal-content">
+                <h3>Terms of Service</h3>
+
+                <div class="terms-text">
+                    <p id="scrollHint">Scroll to the bottom to agree to the terms.</p>
+                    <p>Last updated: 28th Feb 2026</p>
+
+                    <h2>1. Acceptance of Terms</h2>
+                    <p>By accessing and using our services, you agree to be bound by these Terms of Service 
+                        and our Privacy Policy. If you do not agree to these terms, please do not use our services.</p>
+
+                    <h2>2. Use of Services</h2>
+                    <p>You agree to use our services only for lawful purposes and in accordance with these Terms. 
+                        You are responsible for ensuring that your use of the services does not violate any applicable 
+                        laws or regulations.</p>
+
+                    <h2>3. User Accounts</h2>
+                    <p>To access certain features of our services, you may be required to create an account. 
+                        You are responsible for maintaining the confidentiality of your account information 
+                        and for all activities that occur under your account.</p>
+
+                    <h2>4. Intellectual Property</h2>
+                    <p>All content and materials available on our services, including but not limited to text, 
+                        graphics, logos, and software, are the property of StudentStudyHub.co or its licensors and 
+                        are protected by intellectual property laws.</p>
+
+                    <h2>5. Termination</h2>
+                    <p>We reserve the right to terminate or suspend your access to our services at any time, 
+                        without prior notice or liability, for any reason whatsoever.</p>
+
+                    <h2>6. Limitation of Liability</h2>
+                    <p>In no event shall StudentStudyHub.co be liable for any indirect, incidental, special, 
+                        consequential, or punitive damages arising out of or in connection with your use of 
+                        our services.</p>
+
+                    <h2>7. Changes to Terms</h2>
+                    <p>We reserve the right to modify these Terms of Service at any time. We will notify you 
+                        of any changes by posting the new Terms on this page. Your continued use of our services 
+                        after any changes constitutes your acceptance of the new Terms.</p>
+
+                    <h2>8. Contact Us</h2>
+                    <p>If you have any questions about these Terms of Service, please do not hesitant to contact us at 
+                        <a href="mailto:studentstudyhub.co@gmail.com" class="a-contactaccount" target="_blank" rel="noopener noreferrer">studentstudyhub.co@gmail.com</a>.</p>
+                </div>
+
+                <div class="modal-buttons">
+                    <button type="button" id="agreeButton" onclick="closeTerms()">I agree</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
